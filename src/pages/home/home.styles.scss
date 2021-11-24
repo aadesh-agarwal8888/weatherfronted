@@ -1,30 +1,37 @@
 .home {
-  width: 90%;
+  width: 100%;
   justify-content: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 30px auto;
+  align-items: center;
   border: 50px;
 }
 
 .search-bar {
   width: 50%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  margin: 10px auto;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.weather {
+  display: flex;
+  flex-direction: row;
 }
 
 .today {
-  display: flex;
-  justify-content: center;
+  width: 60%;
 }
 
 .forecast {
-  width: 90%;
-  flex-direction: row;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  width: 40%;
 }
   
+.buttons {
+  padding-left: 20px;
+}

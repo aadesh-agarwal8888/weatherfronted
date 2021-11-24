@@ -1,3 +1,4 @@
+import { Divider } from '@mui/material';
 import React from 'react';
 
 class ForecastDetails extends React.Component {
@@ -7,7 +8,7 @@ class ForecastDetails extends React.Component {
         let date = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(this.props.details.dt*1000)
         this.state = {
             details: this.props.details,
-            dt: date,
+            dt: date,  
         }
     }
     componentWillReceiveProps(new_props) {
@@ -24,6 +25,7 @@ class ForecastDetails extends React.Component {
                 <p>Wind Speed: {this.state.details.wind_speed} m/sec</p>
                 <p>Weather: {this.state.details.weather[0].main}</p>
                 <p>Description: {this.state.details.weather[0].description}</p>
+                <Divider variant="middle"/>
             </div>
         );
     }

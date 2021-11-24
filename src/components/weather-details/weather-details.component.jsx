@@ -1,7 +1,7 @@
+import { Paper } from '@mui/material';
 import React from 'react';
 
 import './weather-details.styles.scss';
-import Paper from '@mui/material/Paper';
 
 class WeatherDetails extends React.Component {
 
@@ -21,7 +21,7 @@ class WeatherDetails extends React.Component {
 
     render() {
         return(
-            <Paper elevation = {3} className = "paper">
+            <Paper className = "paper" elevation = {3}>
                 <h1>Current Details</h1>
                 <p>Temperature: {this.state.details.temp} C</p>
                 <p>Humidity: {this.state.details.humidity}%</p>

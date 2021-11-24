@@ -13,6 +13,7 @@ class Signin extends React.Component {
             username: '',
             password: '',
             signin: false,
+            wrongpass: false
         }
     }
 
@@ -20,7 +21,7 @@ class Signin extends React.Component {
 
         axios.post("https://hidden-anchorage-95261.herokuapp.com/login", this.state)
             .then(resposne => {
-                resposne.data.status === true ? this.setState({signin: true}) : this.setState({signin: false})
+                resposne.data.status === true ? this.setState({signin: true}) : this.setState({signin: false, wrongpass: true})
             })
 
     };
@@ -36,6 +37,7 @@ class Signin extends React.Component {
         }
         return(
             <div className = 'sign-in'>
+                <h1>Weather Checker</h1>
                 <h2>I already have a account</h2>
                 <span>Sign In with your email and password</span>
                     <FormInput type="username" name="username" value={this.state.username} required onChange = {this.handleChange} label="Username" />
@@ -45,6 +47,13 @@ class Signin extends React.Component {
                     <div className="buttons">
                         <CustomButton onClick = {this.handleSubmit} type="submit"> Submit </CustomButton>
                     </div>
+
+                    <p style={{color: 'red'}}>*Please username="abc" & pass="abc" </p>
+
+                    {
+                        this.state.wrongpass ? <p style={{color: 'red'}}>Wrong username or password</p> : <div/> 
+                    }
+                    
             </div>
         );
     }
