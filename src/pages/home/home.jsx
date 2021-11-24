@@ -8,7 +8,6 @@ import LeftPanel from '../../components/left-panel/left-panel.component';
 import './home.styles.scss';
 
 class Home extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {

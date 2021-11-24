@@ -33,7 +33,7 @@ class Signin extends React.Component {
 
     render() {
         if (this.state.signin) {
-            return <Navigate to = "/home" />
+            return <Navigate to = "/home" name={this.state.username}/>
         }
         return(
             <div className = 'sign-in'>
