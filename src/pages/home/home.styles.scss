@@ -1,0 +1,30 @@
+.home {
+  width: 90%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 30px auto;
+  border: 50px;
+}
+
+.search-bar {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+}
+
+.today {
+  display: flex;
+  justify-content: center;
+}
+
+.forecast {
+  width: 90%;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+  
